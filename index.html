@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-image: url(images/bg.jpg); background-size: 100%;">
+	<div class="Vrag">
+		<h1 style="margin-left: 500px; margin-top: 200px;">ВРАЖИНА</h1>
+	</div>
+	<div class="Player">
+		<h1 style="margin-left: 550px; margin-top: 100px;">Игрок</h1>
+
+	</div>
+<script type="text/javascript">
+	let Vrag1 = document.querySelector(".Vrag");
+	let player = document.querySelector(".Player");
+
+	
+	let getRandom = function(){
+	let rand = Math.random()*5;
+	let round = Math.round(rand);
+	return round;
+}
+
+	let getImage = function(){
+	let rand = Math.random()*10;
+	let round = Math.round(rand);
+	return round;
+}
+	let array = ["images/1.png","images/2.png","images/3.png","images/4.png","images/5.png","images/6.png","images/7.png","images/8.png",
+	"images/9.png","images/10.png"];
+
+	let createEnemyCards = function(arg){
+	for(let index = 0; index<arg; index = index + 1){
+	let element = document.createElement("img");
+	Vrag1.appendChild(element);
+
+	element.style.height = "200px";
+
+	element.src = array[getRandom()] ;
+
+	
+}
+}
+
+	let createEnemyCards1 = function(arg){
+	for(let index = 0; index<arg; index = index + 1){
+	let element = document.createElement("img");
+	player.appendChild(element);
+	element.style.height = "200px";
+
+	element.src = array[getRandom()] ;
+
+	
+}
+}
+</script>
+</body>
+</html>
